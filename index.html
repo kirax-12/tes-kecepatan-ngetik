@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tes Kecepatan Ngetik — Seberapa Cepat Jarimu?</title>
+<meta name="description" content="Tes kecepatan mengetik Bahasa Indonesia: pilih 30 atau 60 detik, ketik kalimatnya, dan lihat WPM serta akurasimu. Ada kartu hasil siap dibagikan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="tape" aria-hidden="true">
+  <div class="tape-inner">TES KECEPATAN NGETIK ✦ WPM ✦ AKURASI ✦ 30 DETIK / 60 DETIK ✦ JANGAN NGINTIP KEYBOARD ✦ TES KECEPATAN NGETIK ✦ WPM ✦ AKURASI ✦ 30 DETIK / 60 DETIK ✦ JANGAN NGINTIP KEYBOARD ✦&nbsp;</div>
+</div>
+
+<header class="app-header">
+  <h1>Tes Kecepatan <span class="hl">Ngetik</span></h1>
+  <p class="app-sub">jarimu secepat apa sih? buktikan di sini ↓</p>
+</header>
+
+<main>
+  <section class="panel" aria-label="Arena mengetik">
+    <div class="controls">
+      <div class="mode-group" role="group" aria-label="Pilih durasi tes">
+        <span class="mode-label">Durasi:</span>
+        <button type="button" class="mode-btn is-active" data-seconds="30">30 detik</button>
+        <button type="button" class="mode-btn" data-seconds="60">60 detik</button>
+      </div>
+      <button type="button" class="btn-ghost" id="reset-button">↺ Ganti Kalimat</button>
+    </div>
+
+    <div class="stats" aria-live="off">
+      <div class="stat stat-wpm">
+        <span class="stat-num" id="stat-wpm">0</span>
+        <span class="stat-label">WPM</span>
+      </div>
+      <div class="stat stat-acc">
+        <span class="stat-num" id="stat-acc">100%</span>
+        <span class="stat-label">Akurasi</span>
+      </div>
+      <div class="stat stat-time">
+        <span class="stat-num" id="stat-time">30</span>
+        <span class="stat-label">Sisa detik</span>
+      </div>
+    </div>
+
+    <div class="type-wrap" id="type-wrap">
+      <p class="type-text" id="type-text" aria-hidden="true"></p>
+      <input id="type-input" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="Ketik kalimat di atas di sini">
+    </div>
+    <p class="type-hint" id="type-hint">Klik kotak di atas, lalu mulai ngetik. Waktu jalan dari ketikan pertama. Tempel (paste) dimatikan biar jujur 😄</p>
+  </section>
+
+  <section class="result" id="result" hidden aria-live="polite">
+    <div class="result-card">
+      <p class="result-kicker">Hasil tes kamu</p>
+      <p class="result-wpm"><span id="result-wpm-num">0</span> <small>WPM</small></p>
+      <div class="result-facts">
+        <span class="fact-chip">Akurasi <b id="result-acc">0%</b></span>
+        <span class="fact-chip">Benar <b id="result-correct">0</b> karakter</span>
+        <span class="fact-chip">Salah <b id="result-wrong">0</b> karakter</span>
+        <span class="fact-chip">Mode <b id="result-mode">30 detik</b></span>
+      </div>
+      <p class="result-verdict" id="result-verdict">—</p>
+      <p class="result-brand">tes-kecepatan-ngetik · by Remike Dev</p>
+    </div>
+    <div class="result-actions">
+      <button class="btn-action btn-download" id="download-button" type="button">Download Kartu Hasil (PNG)</button>
+      <a class="btn-action btn-share" id="share-button" href="#" target="_blank" rel="noopener">Bagikan ke WhatsApp →</a>
+      <button class="btn-action btn-retry" id="retry-button" type="button">↺ Ulangi</button>
+    </div>
+    <canvas id="card-canvas" width="1080" height="1080" hidden></canvas>
+  </section>
+</main>
+
+<footer class="app-footer">
+  <p>Dibuat oleh <a href="https://github.com/kirax-12" target="_blank" rel="noopener">Remike Dev</a> · WPM dihitung standar: karakter benar ÷ 5 ÷ menit · Skor bagus itu yang akurat, bukan yang asal cepat</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
