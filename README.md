@@ -1,5 +1,7 @@
 # Tes Kecepatan Ngetik
 
+**Demo live:** [tes-kecepatan-ngetik di GitHub Pages](https://kirax-12.github.io/tes-kecepatan-ngetik/)
+
 Tes kecepatan mengetik Bahasa Indonesia langsung di browser. Pilih durasi 30 atau 60 detik, ketik kalimat yang muncul, lalu lihat skor WPM dan akurasimu — lengkap dengan penilaian lucu dan kartu hasil yang bisa dibagikan.
 
 ## Fitur
